@@ -1,0 +1,92 @@
+# HDF5-to-IPLD GitLab CI/CD Pipeline
+# Configured for the HDF5-to-IPLD monorepo to handle testing, linting, and automated design gates.
+
+stages:
+  - lint
+  - test
+  - design-review
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - .cache/pip
+    - .npm/
+    - parser/build/
+
+# =========================================================================
+# LINT STAGE
+# =========================================================================
+lint:parser:
+  stage: lint
+  image: python:3.11-slim
+  script:
+    - pip install flake8
+    - flake8 parser/
+  rules:
+    - changes:
+        - parser/**/*
+
+lint:contracts:
+  stage: lint
+  image: node:20-slim
+  script:
+    - cd contracts
+    - npm ci
+    - npm run lint
+  rules:
+    - changes:
+        - contracts/**/*
+
+# =========================================================================
+# TEST STAGE
+# =========================================================================
+test:parser:
+  stage: test
+  image: python:3.11-slim
+  services:
+    - name: postgres:15-alpine
+      alias: db-test
+  variables:
+    POSTGRES_DB: test_db
+    POSTGRES_USER: test_user
+    POSTGRES_PASSWORD: test_password
+    DATABASE_URL: "postgresql://test_user:test_password@db-test:5432/test_db"
+  script:
+    - apt-get update && apt-get install -y libhdf5-dev g++
+    - pip install -r parser/requirements.txt
+    - pytest parser/tests/
+  rules:
+    - changes:
+        - parser/**/*
+
+test:contracts:
+  stage: test
+  image: node:20-slim
+  script:
+    - cd contracts
+    - npm ci
+    - npm run test
+  rules:
+    - changes:
+        - contracts/**/*
+
+# =========================================================================
+# DESIGN REVIEW STAGE (Automated Frontend Quality Gate)
+# =========================================================================
+design:review:
+  stage: design-review
+  image: python:3.11-slim
+  variables:
+    DESIGN_DOC: "docs/DESIGN.md"
+  script:
+    - pip install openai requests
+    - python tools/ci/design_review_gate.py --diff "$(git diff origin/$CI_DEFAULT_BRANCH...$CI_COMMIT_SHA -- tools/ frontend/)" --vision $DESIGN_DOC
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - tools/**/*
+        - docs/DESIGN.md
