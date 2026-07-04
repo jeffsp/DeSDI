@@ -80,26 +80,26 @@ flowchart LR
     %% Style definitions
     classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px,text-align:left;
 
-    M1["**Milestone 1: Core Ingestion**
+    M1["`**Milestone 1: Core Ingestion**
     (Months 0-2 | $20,000)
     <hr>
     • C++/Python parsing library
     • Read .h5 natively
-    • CLI tool for local sharding"]
+    • CLI tool for local sharding`"]
 
-    M2["**Milestone 2: FVM Registry**
+    M2["`**Milestone 2: FVM Registry**
     (Months 2-4 | $15,000)
     <hr>
     • STAC-compliant smart contract
     • Deploy to FVM
-    • Bounding box lookup functions"]
+    • Bounding box lookup functions`"]
 
-    M3["**Milestone 3: Compute Bridge**
+    M3["`**Milestone 3: Compute Bridge**
     (Months 4-6 | $15,000)
     <hr>
     • ZKP-backed compute orchestrat.
     • Public web query dashboard
-    • Sample NASA datasets live"]
+    • Sample NASA datasets live`"]
 
     M1 --> M2 --> M3
 ```
