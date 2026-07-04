@@ -99,12 +99,6 @@ stress test for a sharding pipeline.
 ```
 /
 ├── gt1l/
-│   ├── land_segments/
-│   │   ├── latitude       # Segment center latitude
-│   │   ├── longitude      # Segment center longitude
-│   │   ├── canopy/        # Canopy height metrics
-│   │   ├── terrain/       # Terrain height metrics
-│   │   └── segment_id_beg
 │   └── signal_photons/
 ├── gt1r/, gt2l/, ...
 └── ancillary_data/
