@@ -85,7 +85,7 @@ The target audience includes Earth scientists, geospatial data analysts, and Web
 library capable of reading `.h5` files natively, sharding them
 spatially, and outputting deterministic IPFS CIDv1 identifiers
 alongside a JSON manifest.
-**Team:** 1 Developer (Jeff Perry) + AI Agents
+**Team:** 1 Developer (Jeff Perry)
 **Funding:** $20,000
 **Timeframe:** Months 0-2 (8 weeks)
 
@@ -94,7 +94,7 @@ alongside a JSON manifest.
 registry on the Filecoin Virtual Machine (FVM). Implementation of
 lookup functions linking geometric bounding boxes to stored CIDs, and
 an autonomous persistence manager to renew storage deals.
-**Team:** 1 Developer (Jeff Perry) + AI Agents
+**Team:** 1 Developer (Jeff Perry)
 **Funding:** $15,000
 **Timeframe:** Months 2-4 (8 weeks)
 
@@ -103,7 +103,7 @@ an autonomous persistence manager to renew storage deals.
 allowing remote processing jobs to execute directly against the stored
 `.h5` datasets. Delivery of a public web-based query interface
 dashboard.
-**Team:** 1 Developer (Jeff Perry) + AI Agents
+**Team:** 1 Developer (Jeff Perry)
 **Funding:** $15,000
 **Timeframe:** Months 4-6 (8 weeks)
 

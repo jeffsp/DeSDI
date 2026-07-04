@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | **Status** | Draft |
-| **Author** | Jeff Perry + Antigravity CLI |
+| **Author** | Jeff Perry |
 | **Created** | 2026-06-23 |
 | **Milestone** | 1 of 3 |
 | **Budget** | $20,000 |
@@ -644,7 +644,7 @@ ctest --test-dir build --output-on-failure
 
 ---
 
-## 12. Agent-Sized Issue Decomposition
+## 12. Granular Issue Decomposition
 
 These are the implementation tasks, each scoped to ~30 minutes of
 coding. Issues should be created in GitLab with labels `lane:cdx-any`
@@ -704,14 +704,14 @@ and `ready`.
 
 ### Parallelization Opportunities
 
-Issues that can be worked on simultaneously by different agents:
+Issues that can be worked on simultaneously by different developers:
 
 - **Lane A**: #3, #4 (cubed-sphere + Hilbert — independent math modules)
 - **Lane B**: #9 → #10 (dag-cbor + CID — independent from spatial code)
 - **Lane C**: #12, #14 (HDF5 reader + fixture generator — independent)
 - **Lane D**: #16 (manifest writer — independent from all above)
 
-Maximum parallelism: **4 agents** working concurrently after #2 lands.
+Maximum parallelism: **4 developers** working concurrently after #2 lands.
 
 ---
 

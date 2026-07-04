@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | **Status** | Draft |
-| **Author** | Jeff Perry + Antigravity CLI |
+| **Author** | Jeff Perry |
 | **Created** | 2026-07-04 |
 | **Milestone** | 2 of 3 |
 | **Budget** | $15,000 |
@@ -151,7 +151,7 @@ desdi register output/manifest.json \
 
 ---
 
-## 7. Agent-Sized Issue Decomposition
+## 7. Granular Issue Decomposition
 
 | # | Issue Title | Dependencies | Est. |
 |---|---|---|---|

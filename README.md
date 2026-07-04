@@ -129,9 +129,9 @@ flowchart LR
 
 ### Repository Layout & Standards
 
-This repository is configured as a strict Monorepo to optimize agentic
-reasoning, testing, and continuous integration across all processing
-layers.
+This repository is configured as a strict Monorepo to optimize
+development speed, testing, and continuous integration across all
+processing layers.
 
 ```mermaid
 flowchart LR

@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | **Status** | Draft |
-| **Author** | Jeff Perry + Antigravity CLI |
+| **Author** | Jeff Perry |
 | **Created** | 2026-07-04 |
 | **Milestone** | 3 of 3 |
 | **Budget** | $15,000 |
@@ -106,7 +106,7 @@ To verify remote execution, we utilize a Zero-Knowledge Virtual Machine (zkVM).
 
 ---
 
-## 6. Agent-Sized Issue Decomposition
+## 6. Granular Issue Decomposition
 
 | # | Issue Title | Dependencies | Est. |
 |---|---|---|---|

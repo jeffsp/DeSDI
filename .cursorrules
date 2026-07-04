@@ -1,4 +1,4 @@
-# DeSDI Agentic Development Workspace Context
+# DeSDI Development Workspace Context
 
 ## 1. Project Context & Vision
 DeSDI (Decentralized Spatial Data Infrastructure) bridges the gap
@@ -30,7 +30,7 @@ an Immutable Spatial Registry on the Filecoin Virtual Machine (FVM).
 
 ## 4. Automation & Continuous Integration Rules (GitLab)
 - **GitLab Issues Integration:** Implementation tasks are categorized
-  into independent, "agent-sized" chunks (tasks designed to be
+  into independent, granular chunks (tasks designed to be
   completed within 30 minutes of straight coding).
 - **Label Trust Boundary:** Automation scripts only interact with
   GitLab issues explicitly containing both the `lane:cdx-any` and
