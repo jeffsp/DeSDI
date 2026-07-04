@@ -133,14 +133,24 @@ This repository is configured as a strict Monorepo to optimize agentic
 reasoning, testing, and continuous integration across all processing
 layers.
 
-``` 
-├── .gitlab-ci.yml       # CI/CD Pipeline (Lint, Test, Design Review)
-├── contracts/           # FVM Smart Contracts (Spatial Registry & Indexing)
-├── docs/                # Public Documentation & Design Vision (DESIGN.md)
-│   └── planning/        # Feature PRDs & Architecture Specifications
-├── infra/               # AWS CDK Infrastructure-as-Code
-├── parser/              # Core C++23 Native Ingestion Libraries
-└── tools/               # CLI Sharding Tools & Frontend Dashboard 
+```mermaid
+flowchart LR
+    %% Node Definitions
+    root["📁 Monorepo Root"] --> ci[".gitlab-ci.yml<br>CI/CD Pipeline (Lint, Test, Design Review)"]
+    root --> contracts["📁 contracts/<br>FVM Smart Contracts (Spatial Registry & Indexing)"]
+    root --> docs["📁 docs/<br>Public Documentation & Design Vision (DESIGN.md)"]
+    root --> infra["📁 infra/<br>AWS CDK Infrastructure-as-Code"]
+    root --> parser["📁 parser/<br>Core C++23 Native Ingestion Libraries"]
+    root --> tools["📁 tools/<br>CLI Sharding Tools & Frontend Dashboard"]
+    
+    docs --> planning["📁 planning/<br>Feature PRDs & Architecture Specifications"]
+
+    %% GitLab-Safe Styles
+    classDef folder fill:#fffdf5,stroke:#b58900,stroke-width:1px,text-align:left;
+    classDef file fill:#fcfcfc,stroke:#586e75,stroke-width:1px,text-align:left;
+    
+    class root,contracts,docs,infra,parser,tools,planning folder;
+    class ci file;
 ```
 
 #### Infrastructure & Deployment Principles
