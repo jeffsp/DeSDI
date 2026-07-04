@@ -75,7 +75,6 @@ decentralized index:
 
 ### Project Milestones
 
-``` 
 ```mermaid
 flowchart LR
     %% Style definitions
