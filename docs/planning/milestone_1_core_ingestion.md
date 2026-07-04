@@ -13,11 +13,11 @@
 
 ## 1. Overview
 
-Milestone 1 delivers the foundational data ingestion layer for DeSDI: a
-pure C++23 library and CLI tool that reads NASA ICESat-2 HDF5 files
+Milestone 1 delivers the foundational data ingestion layer for DeSDI:
+a pure C++23 library and CLI tool that reads NASA ICESat-2 HDF5 files
 natively, spatially shards their contents using a cubed-sphere Hilbert
-curve projection, computes deterministic IPFS CIDv1 identifiers for each
-shard, and outputs a structured manifest suitable for downstream
+curve projection, computes deterministic IPFS CIDv1 identifiers for
+each shard, and outputs a structured manifest suitable for downstream
 registration on the Filecoin Virtual Machine.
 
 No running IPFS node is required. The tool operates entirely offline,
