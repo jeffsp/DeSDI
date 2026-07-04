@@ -108,6 +108,8 @@ To verify remote execution, we utilize a Zero-Knowledge Virtual Machine (zkVM).
 
 ## 6. Granular Issue Decomposition
 
+These are the implementation tasks for the frontend and compute bridge. Issues should be created in GitLab with labels `frontend` (or `compute`) and `ready`.
+
 | # | Issue Title | Dependencies | Est. |
 |---|---|---|---|
 | 37 | `frontend: scaffold Next.js app with Tailwind and wagmi` | None | 20 min |

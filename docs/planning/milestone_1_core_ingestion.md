@@ -647,7 +647,7 @@ ctest --test-dir build --output-on-failure
 ## 12. Granular Issue Decomposition
 
 These are the implementation tasks, each scoped to ~30 minutes of
-coding. Issues should be created in GitLab with labels `lane:cdx-any`
+coding. Issues should be created in GitLab with labels `backend`
 and `ready`.
 
 | # | Issue Title | Dependencies | Est. |

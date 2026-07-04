@@ -33,8 +33,8 @@ an Immutable Spatial Registry on the Filecoin Virtual Machine (FVM).
   into independent, granular chunks (tasks designed to be
   completed within 30 minutes of straight coding).
 - **Label Trust Boundary:** Automation scripts only interact with
-  GitLab issues explicitly containing both the `lane:cdx-any` and
-  `ready` labels.
+  GitLab issues explicitly containing a domain label (e.g., `backend`,
+  `smart-contracts`, or `frontend`) and the `ready` label.
 - **Sandboxed Runner Isolation:** Self-hosted GitLab CI/CD runners
   executing processing tasks must be ephemeral, single-job execution
   environments isolated cleanly in AWS with tightly scoped IAM

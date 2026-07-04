@@ -153,6 +153,8 @@ desdi register output/manifest.json \
 
 ## 7. Granular Issue Decomposition
 
+These are the implementation tasks for the smart contract layer. Issues should be created in GitLab with labels `smart-contracts` and `ready`.
+
 | # | Issue Title | Dependencies | Est. |
 |---|---|---|---|
 | 24 | `contracts: scaffold Foundry project and configure foundry.toml` | None | 15 min |
