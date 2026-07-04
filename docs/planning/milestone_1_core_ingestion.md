@@ -30,7 +30,7 @@ or Filecoin in later milestones.
 
 ### Goals
 
-1. **Parse ICESat-2 ATL03 and ATL08 HDF5 files** — extract photon-level
+1. **Parse ICESat-2 ATL03 and ATL24 HDF5 files** — extract photon-level
    point cloud data, geolocation arrays, and internal metadata
    attributes using native HDF5 C++ bindings.
 2. **Spatially shard data via cubed-sphere Hilbert curve** — project
@@ -94,7 +94,7 @@ stress test for a sharding pipeline.
 └── quality_assessment/
 ```
 
-### HDF5 Internal Structure (ATL08)
+### HDF5 Internal Structure (ATL24)
 
 ```
 /
@@ -124,7 +124,7 @@ stress test for a sharding pipeline.
                       │
           ┌───────────▼───────────┐
           │   hdf5_reader.hpp     │  ← Reads HDF5 via HighFive
-          │   (ATL03/ATL08 aware) │     or HDF5 C++ API
+          │   (ATL03/ATL24 aware) │     or HDF5 C++ API
           └───────────┬───────────┘
                       │  vector<GeoPoint>
           ┌───────────▼───────────┐
@@ -156,7 +156,7 @@ parser/
 ├── include/
 │   └── desdi/
 │       ├── geo_point.hpp         # GeoPoint struct (lat, lon, h, time, attrs)
-│       ├── hdf5_reader.hpp       # HDF5 ingestion (ATL03/ATL08)
+│       ├── hdf5_reader.hpp       # HDF5 ingestion (ATL03/ATL24)
 │       ├── cubed_sphere.hpp      # WGS84 → cubed-sphere face projection
 │       ├── hilbert_curve.hpp     # Hilbert curve index computation
 │       ├── hilbert_sharder.hpp   # Spatial sharding orchestrator
@@ -175,7 +175,7 @@ parser/
 │   ├── test_hdf5_reader.cpp
 │   ├── test_manifest_writer.cpp
 │   ├── fixtures/                 # Synthetic HDF5 test files
-│   │   └── generate_fixtures.py  # Script to create synthetic ATL03/ATL08
+│   │   └── generate_fixtures.py  # Script to create synthetic ATL03/ATL24
 │   └── integration/
 │       └── test_full_pipeline.cpp
 └── README.md
@@ -371,7 +371,7 @@ Unit tests must reproduce this exact CID from this exact input.
 desdi ingest <file.h5> [options]
 
 Arguments:
-  <file.h5>              Path to an ICESat-2 HDF5 file (ATL03 or ATL08)
+  <file.h5>              Path to an ICESat-2 HDF5 file (ATL03 or ATL24)
 
 Options:
   --level <int>          Hilbert cell level (default: 13)
@@ -485,13 +485,13 @@ STAC-compliant Item:
 | `test_hilbert_curve` | Hilbert index computation, known-value checks, round-trip (index ↔ xy) |
 | `test_hilbert_sharder` | Point grouping, empty input, single-cell, cross-face tracks |
 | `test_cid_generator` | Deterministic CID output, dag-cbor canonical encoding, known test vectors |
-| `test_hdf5_reader` | Read synthetic ATL03/ATL08 fixtures, handle missing datasets gracefully |
+| `test_hdf5_reader` | Read synthetic ATL03/ATL24 fixtures, handle missing datasets gracefully |
 | `test_manifest_writer` | JSON schema compliance, STAC schema compliance |
 
 ### Synthetic Fixture Generator
 
 `tests/fixtures/generate_fixtures.py` creates small HDF5 files (~1 MB)
-that mimic the ATL03/ATL08 internal structure with deterministic data.
+that mimic the ATL03/ATL24 internal structure with deterministic data.
 Uses `h5py` (Python) to generate fixtures consumed by C++ tests.
 
 ### Integration Tests (Real Data, CI-only)
@@ -664,7 +664,7 @@ and `ready`.
 | 10 | `parser: implement CIDv1 generator (cid_generator.hpp)` | #9 | 30 min |
 | 11 | `parser: unit tests for dag-cbor + CID generator` | #10 | 25 min |
 | 12 | `parser: implement HDF5 reader for ATL03 (hdf5_reader.hpp)` | #2 | 30 min |
-| 13 | `parser: implement HDF5 reader for ATL08` | #12 | 20 min |
+| 13 | `parser: implement HDF5 reader for ATL24` | #12 | 20 min |
 | 14 | `parser: create synthetic HDF5 fixture generator (Python)` | None | 25 min |
 | 15 | `parser: unit tests for HDF5 reader using synthetic fixtures` | #12, #14 | 25 min |
 | 16 | `parser: implement JSON manifest writer (manifest_writer.hpp)` | #2 | 20 min |
@@ -686,7 +686,7 @@ and `ready`.
  │    ├── #9 (dag-cbor)
  │    │    └── #10 (CID gen) ── #11 (tests)
  │    ├── #12 (HDF5 ATL03)
- │    │    ├── #13 (ATL08)
+ │    │    ├── #13 (ATL24)
  │    │    └── #15 (tests) ◄── #14 (fixtures)
  │    └── #16 (manifest)
  │         ├── #17 (STAC)  ── #18 (tests)

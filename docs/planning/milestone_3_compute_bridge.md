@@ -101,7 +101,7 @@ To verify remote execution, we utilize a Zero-Knowledge Virtual Machine (zkVM).
 **Core Features:**
 - **Map View**: Interactive globe/map displaying bounding boxes of available datasets indexed on the FVM registry.
 - **Wallet Connection**: Connect MetaMask/WalletConnect to interact with the Filecoin network.
-- **Search Interface**: Filter by time range, dataset type (ATL03 vs ATL08), and draw bounding boxes on the map.
+- **Search Interface**: Filter by time range, dataset type (ATL03 vs ATL24), and draw bounding boxes on the map.
 - **Compute Dashboard**: Select a region, choose an analysis script, dispatch the job, and view the verified ZKP results upon completion.
 
 ---
