@@ -7,17 +7,17 @@ multi-dimensional scientific computing formats and decentralized Web3
 storage networks. Developed under the **Decentralized Spatial Data
 Infrastructure (DeSDI) Initiative**, this open-source solution
 provides a specialized ingestion pipeline to parse, shard, and
-permanently index critical public-good datasets—such as petabytes of
-NASA earth-observation data—onto the Filecoin network.
+permanently index critical public-good datasets, such as petabytes of
+NASA earth-observation data, onto the Filecoin network.
 
 Traditional decentralized protocols route and locate data strictly via
 cryptographic Content Identifiers (CIDs) rather than geographic or
 temporal coordinates. This tool extracts spatial metadata natively
 during the ingestion process and integrates it with a decentralized
 spatial indexing layer built on the SpatioTemporal Asset Catalog
-(STAC) standard. As a result, researchers can query, index, and locate
-raw scientific data cubes or point clouds by physical geography rather
-than abstract cryptographic hashes.
+(STAC) standard. As a result, researchers can query, index, and locate 
+ATLAS ICESat-2 laser altimetry products and multi-dimensional HDF5 data 
+cubes by physical geography rather than abstract cryptographic hashes.
 
 -----
 
@@ -27,7 +27,7 @@ The ingestion and processing architecture is structured into three
 discrete, decoupled tiers:
 
 1.  **The Parser & Sharding Engine:** Built with optimized, low-level
-    libraries (utilizing specialized C++ or Python processing
+    libraries (utilizing specialized modern C++23 or Python processing
     bindings), this engine ingests raw `.h5` (HDF5), `.laz`, and Cloud
     Optimized GeoTIFF (COG) files. It natively extracts internal
     metadata attributes, shards massive scientific files into
@@ -76,13 +76,33 @@ decentralized index:
 ### Project Milestones
 
 ``` 
-  Milestone 1: Core Ingestion              Milestone 2: FVM Registry               Milestone 3: Compute Bridge
-  (Months 0-2 | $20,000)                   (Months 2-4 | $15,000)                  (Months 4-6 | $15,000)
-┌─────────────────────────────────┐      ┌─────────────────────────────────┐      ┌─────────────────────────────────┐
-│ • C++/Python parsing library    │ ────>│ • STAC-compliant smart contract │ ────>│ • ZKP-backed compute orchestrat.│
-│ • Read .h5 natively             │      │ • Deploy to FVM                 │      │ • Public web query dashboard    │
-│ • CLI tool for local sharding   │      │ • Bounding box lookup functions │      │ • Sample NASA datasets live     │
-└─────────────────────────────────┘      └─────────────────────────────────┘      └─────────────────────────────────┘ 
+```mermaid
+flowchart LR
+    %% Style definitions
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px,text-align:left;
+
+    M1["**Milestone 1: Core Ingestion**
+    (Months 0-2 | $20,000)
+    <hr>
+    • C++/Python parsing library
+    • Read .h5 natively
+    • CLI tool for local sharding"]
+
+    M2["**Milestone 2: FVM Registry**
+    (Months 2-4 | $15,000)
+    <hr>
+    • STAC-compliant smart contract
+    • Deploy to FVM
+    • Bounding box lookup functions"]
+
+    M3["**Milestone 3: Compute Bridge**
+    (Months 4-6 | $15,000)
+    <hr>
+    • ZKP-backed compute orchestrat.
+    • Public web query dashboard
+    • Sample NASA datasets live"]
+
+    M1 --> M2 --> M3
 ```
 
   * **Milestone 1 (Months 0-2): Core Ingestion & Native Parser Engine**
