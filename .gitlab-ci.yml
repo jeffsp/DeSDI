@@ -24,8 +24,8 @@ lint:parser:
   stage: lint
   image: python:3.11-slim
   script:
-    - pip install flake8
-    - flake8 parser/
+    - apt-get update && apt-get install -y clang-format
+    - find parser/ -name '*.cpp' -o -name '*.hpp' | xargs clang-format --dry-run -Werror
   rules:
     - changes:
         - parser/**/*
@@ -56,9 +56,11 @@ test:parser:
     POSTGRES_PASSWORD: test_password
     DATABASE_URL: "postgresql://test_user:test_password@db-test:5432/test_db"
   script:
-    - apt-get update && apt-get install -y libhdf5-dev g++
-    - pip install -r parser/requirements.txt
-    - pytest parser/tests/
+    - apt-get update && apt-get install -y libhdf5-dev g++ cmake ninja-build
+    - cd parser
+    - cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -Wno-dev
+    - cmake --build build
+    - cd build && ctest --output-on-failure
   rules:
     - changes:
         - parser/**/*
