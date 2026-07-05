@@ -1,4 +1,4 @@
-# Open Grant Proposal: `DeSDI -- HDF5-to-IPLD for NASA Earthdata`
+# Open Grant Proposal: `DeSDI - HDF5-to-IPLD for NASA Earthdata`
 
 **Project Name:** DeSDI
 
