@@ -32,9 +32,9 @@ temporal coordinates. This tool extracts spatial metadata natively
 during the ingestion process and integrates it with a decentralized
 spatial indexing layer built on the SpatioTemporal Asset Catalog
 (STAC) standard. As a result, researchers can query, index, and locate
-ATLAS ICESat-2 laser altimetry products and multi-dimensional HDF5
-data cubes by physical geography rather than abstract cryptographic
-hashes.
+ATLAS Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) laser
+altimetry products and multi-dimensional HDF5 data cubes by physical
+geography rather than abstract cryptographic hashes.
 
 ## Impact 
 
