@@ -29,6 +29,7 @@ lint:parser:
   rules:
     - changes:
         - parser/**/*
+        - .gitlab-ci.yml
 
 lint:contracts:
   stage: lint
@@ -40,6 +41,7 @@ lint:contracts:
   rules:
     - changes:
         - contracts/**/*
+        - .gitlab-ci.yml
 
 # =========================================================================
 # TEST STAGE
@@ -64,6 +66,7 @@ test:parser:
   rules:
     - changes:
         - parser/**/*
+        - .gitlab-ci.yml
 
 test:contracts:
   stage: test
@@ -75,6 +78,7 @@ test:contracts:
   rules:
     - changes:
         - contracts/**/*
+        - .gitlab-ci.yml
 
 # =========================================================================
 # DESIGN REVIEW STAGE (Automated Frontend Quality Gate)
