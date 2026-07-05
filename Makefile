@@ -2,7 +2,7 @@ default: help
 
 .PHONY: build_parser # Build the C++ ingestion parser using CMake
 build_parser:
-	@cd parser && cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release && cmake --build build
+	@cd parser && cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -Wno-dev && cmake --build build
 
 .PHONY: test_parser # Run the Catch2 unit tests for the parser
 test_parser:

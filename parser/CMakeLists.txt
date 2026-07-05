@@ -4,7 +4,15 @@ project(desdi-parser LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_WARN_DEPRECATED OFF)
 
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+    set(CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}")
+    set(CMAKE_C_COMPILER_LAUNCHER "${CCACHE_PROGRAM}") # also for C if needed by dependencies
+endif()
+
+set(FETCHCONTENT_BASE_DIR ${CMAKE_SOURCE_DIR}/.deps CACHE PATH "Directory for downloaded dependencies")
 include(FetchContent)
 
 FetchContent_Declare(HighFive
@@ -24,9 +32,9 @@ FetchContent_Declare(Catch2
   GIT_TAG        v3.7.1
 )
 
-set(HIGHFIVE_USE_BOOST OFF)
-set(HIGHFIVE_UNIT_TESTS OFF)
-set(HIGHFIVE_EXAMPLES OFF)
+set(HIGHFIVE_USE_BOOST OFF CACHE BOOL "" FORCE)
+set(HIGHFIVE_UNIT_TESTS OFF CACHE STRING "" FORCE)
+set(HIGHFIVE_EXAMPLES OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(HighFive nlohmann_json CLI11 Catch2)
 
 find_package(HDF5 REQUIRED COMPONENTS C)
