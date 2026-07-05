@@ -1,1 +1,16 @@
-BasedOnStyle: LLVM
+---
+BasedOnStyle: llvm
+IndentWidth: 4
+AccessModifierOffset: 0
+UseTab: Never
+BreakBeforeBraces: Allman
+ColumnLimit: 80
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+RemoveBracesLLVM: true
+SpaceBeforeParens: Always
+AlignAfterOpenBracket: Align
+ContinuationIndentWidth: 4
+PointerAlignment: Right
+ReferenceAlignment: Right
+...
