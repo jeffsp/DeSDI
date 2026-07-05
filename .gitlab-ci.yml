@@ -58,7 +58,7 @@ test:parser:
     POSTGRES_PASSWORD: test_password
     DATABASE_URL: "postgresql://test_user:test_password@db-test:5432/test_db"
   script:
-    - apt-get update && apt-get install -y libhdf5-dev g++ cmake ninja-build
+    - apt-get update && apt-get install -y libhdf5-dev g++ cmake ninja-build git
     - cd parser
     - cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -Wno-dev
     - cmake --build build
