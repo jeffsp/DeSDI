@@ -143,20 +143,20 @@ scientific data via automated Filecoin storage renewals.
 
 ## Relevant Experience
 
-I am a researcher affiliated with the Center for Perceptual Systems at
-the University of Texas at Austin, specializing in machine learning,
-image science, natural scene statistics, and computer vision.
-Crucially for this proposal, I collaborated with NASA as part of a
-science team to develop the ICESat-2 ATL24 data product algorithm,
-which classifies photon returns from the ATLAS instrument (now
-permanently archived and distributed publicly by the NSIDC, one of
-NASA's Distributed Active Archive Centers (DAACs)).
+Jeff Perry is a researcher affiliated with the Center for Perceptual
+Systems at the University of Texas at Austin, specializing in machine
+learning, image science, natural scene statistics, and computer
+vision. Crucially for this proposal, he has collaborated with NASA as
+part of a science team to develop the ICESat-2 ATL24 data product
+algorithm, which classifies photon returns from the ATLAS instrument
+(now permanently archived and distributed publicly by the NSIDC, one
+of NASA's Distributed Active Archive Centers (DAACs)).
 
-I also have extensive experience in modern C++ systems engineering.
+He also has extensive experience in modern C++ systems engineering.
 While this project ventures into Web3 and Filecoin, the core
 architecture heavily relies on parsing complex scientific datasets and
-high-performance offline processing—domains where my direct experience
-authoring NASA ICESat-2 algorithms and my academic research provide a
+high-performance offline processing—domains where his direct experience
+authoring NASA ICESat-2 algorithms and his academic research provide a
 unique and decisive advantage.
 
 DSP is a frontend developer and Web3 engineer specializing in building
