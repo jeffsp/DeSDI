@@ -39,7 +39,9 @@ lint:contracts:
     - npm ci
     - npm run lint
   rules:
-    - changes:
+    - exists:
+        - contracts/package.json
+      changes:
         - contracts/**/*
         - .gitlab-ci.yml
 
@@ -76,7 +78,9 @@ test:contracts:
     - npm ci
     - npm run test
   rules:
-    - changes:
+    - exists:
+        - contracts/package.json
+      changes:
         - contracts/**/*
         - .gitlab-ci.yml
 
