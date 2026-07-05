@@ -110,7 +110,7 @@ dashboard.
 ## Total Budget Requested
 
 | Milestone # | Description | Deliverables | Completion Date | Funding |
-|===|===|===|===|===|
+|---|---|---|---|---|
 | 1 | Core Ingestion | C++23 Native Parser & CLI | Month 2 | $20,000 |
 | 2 | FVM Registry | STAC Smart Contracts on FVM | Month 4 | $15,000 |
 | 3 | Compute Bridge | ZKP Orchestrator & Web UI | Month 6 | $15,000 |
@@ -131,6 +131,7 @@ scientific data via automated Filecoin storage renewals.
 ## Team Members
 
 - Jeff Perry (Lead Developer)
+- DSP (Developer)
 
 ## Team Member LinkedIn Profiles
 
@@ -157,6 +158,11 @@ architecture heavily relies on parsing complex scientific datasets and
 high-performance offline processing—domains where my direct experience
 authoring NASA ICESat-2 algorithms and my academic research provide a
 unique and decisive advantage.
+
+DSP is a frontend developer and Web3 engineer specializing in building
+intuitive, design-forward interfaces for decentralized applications.
+His experience bridges the gap between complex blockchain architecture
+and seamless user experiences using modern web design.
 
 ## Team code repositories
 
