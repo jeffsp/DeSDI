@@ -85,11 +85,11 @@ monorepo-root/
 
 ## 4. The ZKP Compute-to-Data Bridge
 
-To verify remote execution, we utilize a Zero-Knowledge Virtual Machine (zkVM). 
+To verify remote execution, we utilize a Zero-Knowledge Virtual Machine (zkVM).
 
 1. **Guest Code**: A user writes an analysis script (e.g., calculating average photon height in a given area) compiled to the zkVM's architecture (typically RISC-V).
 2. **Execution**: The storage provider runs this code inside the zkVM. The input to the code is the IPFS CID of the sharded data.
-3. **Verification**: The zkVM generates a mathematical "receipt" (STARK/SNARK). 
+3. **Verification**: The zkVM generates a mathematical "receipt" (STARK/SNARK).
 4. **Trust**: The user receives the output (e.g., `average_height: 42.5m`) and the receipt. They verify the receipt instantly locally or via an FVM smart contract, mathematically proving the output is correct and derived *exactly* from the requested CID.
 
 ---

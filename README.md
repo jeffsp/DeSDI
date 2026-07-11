@@ -1,5 +1,7 @@
 # HDF5-to-IPLD: Unlocking Petabytes of NASA Earthdata for the Filecoin Network
 
+> **Note:** This repository is a funding proposal prepared for the **[Filecoin ProPGF](https://filpgf.io)** program under the "Tooling & Dev Ecosystem" area of focus. It was originally drafted for the legacy devgrants program and has been updated to align with the ProPGF initiative.
+
 ### Project Overview
 
 The **HDF5-to-IPLD Tool** bridges the gap between complex
@@ -143,13 +145,13 @@ flowchart LR
     root --> infra["📁 infra/<br>AWS CDK Infrastructure-as-Code"]
     root --> parser["📁 parser/<br>Core C++23 Native Ingestion Libraries"]
     root --> tools["📁 tools/<br>CLI Sharding Tools & Frontend Dashboard"]
-    
+
     docs --> planning["📁 planning/<br>Feature PRDs & Architecture Specifications"]
 
     %% GitLab-Safe Styles
     classDef folder fill:#fffdf5,stroke:#b58900,stroke-width:1px,text-align:left;
     classDef file fill:#fcfcfc,stroke:#586e75,stroke-width:1px,text-align:left;
-    
+
     class root,contracts,docs,infra,parser,tools,planning folder;
     class ci file;
 ```

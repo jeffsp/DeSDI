@@ -1,8 +1,8 @@
-# Open Grant Proposal - `DeSDI: HDF5-to-IPLD for NASA Earthdata`
+# ProPGF Grant Proposal - `DeSDI: HDF5-to-IPLD for NASA Earthdata`
 
 **Project Name:** DeSDI
 
-**Proposal Category:** `Developer and data tooling`
+**Area of Focus:** `Tooling & Dev Ecosystem`
 
 **Individual or Entity Name:** Jeff Perry
 
@@ -36,7 +36,7 @@ ATLAS Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) laser
 altimetry products and multi-dimensional HDF5 data cubes by physical
 geography rather than abstract cryptographic hashes.
 
-## Impact 
+## Impact
 
 - **Addressing "Data Gravity":** NASA datasets like ICESat-2 are
   massive, stored in complex formats (.h5), and downloading them

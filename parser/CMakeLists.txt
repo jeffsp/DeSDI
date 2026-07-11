@@ -42,7 +42,7 @@ find_package(OpenSSL REQUIRED)
 
 add_library(desdi_lib INTERFACE)
 target_include_directories(desdi_lib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(desdi_lib INTERFACE 
+target_link_libraries(desdi_lib INTERFACE
     HighFive
     nlohmann_json::nlohmann_json
     OpenSSL::Crypto

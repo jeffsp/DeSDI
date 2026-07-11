@@ -97,7 +97,7 @@ contracts/
 
 ### DataTypes.sol
 
-To efficiently store STAC metadata on-chain, data must be packed to optimize gas costs. 
+To efficiently store STAC metadata on-chain, data must be packed to optimize gas costs.
 
 ```solidity
 // Represents a STAC Item (Granule)
