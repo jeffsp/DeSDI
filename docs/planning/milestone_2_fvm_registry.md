@@ -6,8 +6,8 @@
 | **Author** | Jeff Perry |
 | **Created** | 2026-07-04 |
 | **Milestone** | 2 of 3 |
-| **Budget** | $15,000 |
-| **Timeline** | Months 2–4 |
+| **Budget** | $60,000 |
+| **Timeline** | Months 3–4 |
 
 ---
 
@@ -31,9 +31,8 @@ Additionally, this milestone leverages FVM's unique capabilities to automate dat
 
 ### Non-Goals (deferred to later milestones)
 
-- ZKP-backed compute-to-data orchestration (Milestone 3)
-- Public web dashboard (Milestone 3)
-- Fully automated, large-scale onboarding of petabytes of data (focus is on proving the architecture with sample granules)
+- Public web explorer and high-throughput retrieval endpoints (Milestone 3)
+- Live institutional onboarding of 1–5+ TB NASA granules (Milestone 3)
 
 ---
 

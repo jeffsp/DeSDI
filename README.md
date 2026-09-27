@@ -41,12 +41,12 @@ discrete, decoupled tiers:
     geometric bounding boxes/polygons and temporal timestamps
     permanently on the blockchain, mapping them directly to their
     corresponding heavy-data IPFS CIDs.
-3.  **The Compute-to-Data Bridge:** To eliminate the inefficiencies of
-    downloading gigabytes of decentralized data to local workstations,
-    this decentralized infrastructure orchestration system pushes
-    specialized analysis jobs (such as C++ or Python processing tasks)
-    directly to the storage nodes hosting the target CIDs. Computation
-    integrity is verified remotely via Zero-Knowledge Proofs (ZKPs).
+3.  **The High-Throughput Spatial Retrieval & Explorer Layer:** To eliminate
+    the inefficiency of downloading gigabytes of decentralized raw files
+    to local workstations, this layer enables researchers to query
+    spatial bounding boxes and stream targeted data subsets (or point tiles)
+    directly from decentralized storage providers without fetching
+    multi-terabyte raw blobs.
 
 -----
 
@@ -83,50 +83,59 @@ flowchart LR
     %% Style definitions
     classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px,text-align:left;
 
-    M1["`**Milestone 1: Core Ingestion**
-    (Months 0-2 | $20,000)
+    M1["`**Milestone 1: Spatial CAR Engine**
+    (Months 1-2 | $55,000)
     <hr>
-    • C++/Python parsing library
-    • Read .h5 natively
-    • CLI tool for local sharding`"]
+    • C++23 native HDF5 parser
+    • Spatial chunking & indexes
+    • Deterministic CAR packager`"]
 
-    M2["`**Milestone 2: FVM Registry**
-    (Months 2-4 | $15,000)
+    M2["`**Milestone 2: FVM Deal Layer**
+    (Months 3-4 | $60,000)
     <hr>
-    • STAC-compliant smart contract
-    • Deploy to FVM
-    • Bounding box lookup functions`"]
+    • STAC-compliant registry
+    • Deal automation & renewals
+    • Calibration deployment`"]
 
-    M3["`**Milestone 3: Compute Bridge**
-    (Months 4-6 | $15,000)
+    M3["`**Milestone 3: NASA Pilot & Explorer**
+    (Months 5-6 | $55,000)
     <hr>
-    • ZKP-backed compute orchestrat.
-    • Public web query dashboard
-    • Sample NASA datasets live`"]
+    • 1–5+ TB NASA data live onchain
+    • Hosted spatial web explorer
+    • Open-science case study`"]
 
     M1 --> M2 --> M3
 ```
 
-  * **Milestone 1 (Months 0-2): Core Ingestion & Native Parser Engine**
-      * *Deliverables:* Development of the C++/Python open-source
-        parsing library capable of reading `.h5` files natively and
-        transforming them into peer-to-peer content blocks. Completion
-        of basic CLI tooling to execute sharding and local CID
-        generation.
-      * *Allocation:* $20,000
-  * **Milestone 2 (Months 2-4): FVM Spatial Registry & Indexing Smart Contracts**
-      * *Deliverables:* Deployment of the STAC-compliant smart
-        contract registry on the Filecoin Virtual Machine (FVM).
-        Implementation of lookup functions linking geometric bounding
-        boxes to stored CIDs.
+  * **Milestone 1 (Months 1-2): Data Pipeline & Spatial CAR Engine**
+      * *Deliverables:* High-performance C++23 open-source parsing
+        library capable of reading `.h5` files natively, mapping photon
+        attributes to spatial chunks via a cubed-sphere Hilbert curve,
+        and packing them into deterministic CAR files with spatial index
+        manifests. Includes CLI tooling for local dataset staging and
+        sharding.
+      * *Allocation:* $55,000
+  * **Milestone 2 (Months 3-4): Onchain Deal Management & FVM Layer**
+      * *Deliverables:* Deployment of an immutable, STAC-compliant
+        spatial registry on the Filecoin Virtual Machine (FVM).
+        Implementation of spatial bounding box lookup functions linking
+        geographic areas to stored piece CIDs. Automated deal renewal
+        orchestrator and proof-of-spacetime verification monitor on
+        Calibration testnet and Mainnet.
+      * *Allocation:* $60,000
+  * **Milestone 3 (Months 5-6): Institutional NASA Pilot & Retrieval Showcase**
+      * *Deliverables:* Live onboarding and permanent onchain storage of
+        1–5+ TB of real-world NASA ICESat-2 (ATL24) data products on
+        Filecoin mainnet storage providers. Publicly hosted web explorer
+        demonstrating sub-second spatial queries and chunk downloads. Full
+        developer quickstart, documentation, and open-science case study.
+      * *Allocation:* $55,000
+  * **Direct Costs (Months 1-6): Infrastructure, Storage Deals & Gas**
+      * *Deliverables:* High-memory staging compute for multi-gigabyte HDF5
+        granule processing, Filecoin Mainnet storage deal collateral,
+        provider deal fees, and transaction gas.
       * *Allocation:* $15,000
-  * **Milestone 3 (Months 4-6): End-to-End Pipeline & Compute-to-Data Verification**
-      * *Deliverables:* Integration of the ZKP-backed compute
-        orchestrator allowing remote processing jobs to execute
-        directly against the stored `.h5` datasets. Delivery of public
-        documentation, sample NASA datasets hosted on Filecoin, and a
-        web-based query interface dashboard.
-      * *Allocation:* $15,000
+  * **Total Funding Requested:** $185,000
 
 -----
 

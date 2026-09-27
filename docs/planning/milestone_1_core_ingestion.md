@@ -6,8 +6,8 @@
 | **Author** | Jeff Perry |
 | **Created** | 2026-06-23 |
 | **Milestone** | 1 of 3 |
-| **Budget** | $20,000 |
-| **Timeline** | Months 0–2 |
+| **Budget** | $55,000 |
+| **Timeline** | Months 1–2 |
 
 ---
 
