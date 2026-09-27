@@ -130,11 +130,31 @@ The repository is maintained as a strict monorepo enforcing code quality through
 
 ## Relevant Experience
 
-**Jeff Perry** is a researcher affiliated with the Center for Perceptual Systems at the University of Texas at Austin, specializing in machine learning, image science, natural scene statistics, and computer vision. Crucially for this proposal, he has collaborated directly with NASA as part of the science team to develop the ICESat-2 ATL24 data product algorithm, which classifies photon returns from the ATLAS instrument (permanently archived and distributed publicly by the NSIDC DAAC).
+**Jeff Perry** is a Senior Engineering Scientist at the Center for
+Space Research at the University of Texas at Austin and a lead
+developer for the 3D Geospatial Laboratory (3DGL). He specializes in
+geospatial analytics, machine learning for multi-data fusion, natural
+scene statistics, and computer vision. Crucially for this proposal, he
+has collaborated directly with NASA as part of the science team to
+develop the ICESat-2 ATL24 data product algorithm, which classifies
+photon returns from the ATLAS instrument (permanently archived and
+distributed publicly by the NSIDC DAAC).
 
-He brings decades of specialized experience in modern C++ systems engineering, high-performance computing, and scientific dataset parsing. While this initiative bridges into Web3 and Filecoin, the primary technical bottleneck is parsing complex multi-dimensional scientific datasets and structuring performant spatial indexes—domains where his direct experience authoring NASA ICESat-2 algorithms provides a decisive and unique advantage.
+He brings decades of specialized experience in modern C++ systems
+engineering, high-performance computing, and scientific dataset
+parsing. While this initiative bridges into Web3 and Filecoin, the
+primary technical bottleneck is parsing complex multi-dimensional
+scientific datasets and structuring performant spatial indexes—domains
+where his direct experience authoring NASA ICESat-2 algorithms and
+geospatial analytics provides a decisive and unique advantage.
 
-**Open Role (Web3 & Frontend Developer):** We are actively recruiting for a frontend and Web3 developer specializing in building intuitive, design-forward user interfaces for decentralized applications. The ideal candidate will have a background in smart contract integration, Web3 deal flows, and modern GIS/mapping visualization libraries, enabling them to bridge complex blockchain architecture into seamless researcher-facing tools.
+**Open Role (Web3 & Frontend Developer):** We are actively recruiting
+for a frontend and Web3 developer specializing in building intuitive,
+design-forward user interfaces for decentralized applications. The
+ideal candidate will have a background in smart contract integration,
+Web3 deal flows, and modern GIS/mapping visualization libraries,
+enabling them to bridge complex blockchain architecture into seamless
+researcher-facing tools.
 
 ## Team Code Repositories
 
