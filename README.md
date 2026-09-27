@@ -1,7 +1,5 @@
 # HDF5-to-IPLD: Unlocking Petabytes of NASA Earthdata for the Filecoin Network
 
-> **Note:** This repository is a funding proposal prepared for the **[Filecoin ProPGF](https://filpgf.io)** program under the "Tooling & Dev Ecosystem" area of focus. It was originally drafted for the legacy devgrants program and has been updated to align with the ProPGF initiative.
-
 ### Project Overview
 
 The **HDF5-to-IPLD Tool** bridges the gap between complex
